@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   "folke/tokyonight.nvim", -- 主题
   "Shatur/neovim-ayu",
+  "xiyaowong/transparent.nvim",
   "nvim-lualine/lualine.nvim",  -- 状态栏
   "nvim-tree/nvim-tree.lua",  -- 文档树
   "nvim-tree/nvim-web-devicons", -- 文档树图标
@@ -43,12 +44,21 @@ local plugins = {
   "akinsho/bufferline.nvim", -- buffer分割线
   "lewis6991/gitsigns.nvim", -- 左则git提示
 
-  "jose-elias-alvarez/null-ls.nvim",
+  "stevearc/conform.nvim",-- 格式化,手动安装nvim-0.9分支
+  -- "hhatto/autopep8",
+  "PyCQA/pycodestyle",
 
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.1', -- 文件检索
     dependencies = { {'nvim-lua/plenary.nvim'} } -- requires要改为dependencies
   },
+
+  {
+    -- amongst your other plugins
+    {'akinsho/toggleterm.nvim', version = "*", config = true}
+    -- or
+    -- {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}}
+  }
 
 }
 local opts = {} -- 注意要定义这个变量

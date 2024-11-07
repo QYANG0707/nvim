@@ -1,3 +1,7 @@
+-- utf8
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "UTF-8"
+
 local opt = vim.opt
 
 -- 行号
@@ -33,4 +37,4 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
-vim.cmd[[colorscheme ayu-mirage]]
+vim.cmd[[colorscheme tokyonight-night]]

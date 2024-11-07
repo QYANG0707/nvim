@@ -1,3 +1,8 @@
+-- define common options
+local opts = {
+    noremap = true,      -- non-recursive
+    silent = true,       -- do not show message
+}
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -15,12 +20,18 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<leader>sv", "<C-w>v") -- 水平新增窗口 
 keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
 
+-- 分屏窗口大小设置
+keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
+keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
+keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
+keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 切换buffer
-keymap.set("n", "<C-L>", ":bnext<CR>")
-keymap.set("n", "<C-H>", ":bprevious<CR>")
+keymap.set("n", "<S-L>", ":bnext<CR>")
+keymap.set("n", "<S-H>", ":bprevious<CR>")
 
 -- ---------- 插件 ---------- ---
 -- nvim-tree
