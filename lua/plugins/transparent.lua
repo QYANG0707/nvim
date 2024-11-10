@@ -1,3 +1,5 @@
+require('transparent').clear_prefix('NvimTree')
+-- require('transparent').clear_prefix('lualine')
  -- Optional, you don't have to run setup.
 require("transparent").setup({
   -- table: default groups
@@ -9,7 +11,8 @@ require("transparent").setup({
     'EndOfBuffer',
   },
   -- table: additional groups that should be cleared
-  extra_groups = {},
+  extra_groups = {'nvim-tree'},
+
   -- table: groups you don't want to clear
   exclude_groups = {},
   -- function: code to be executed after highlight groups are cleared
