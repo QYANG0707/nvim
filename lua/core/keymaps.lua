@@ -11,6 +11,7 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "<C-j>", "<ESC>o")
 keymap.set("i", "<C-k>", "<ESC>O")
+keymap.set("i", "<C-s>", "<ESC>:w<CR>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动
@@ -21,6 +22,8 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- 窗口
 keymap.set("n", "<leader>sv", "<C-w>v") -- 水平新增窗口 
 keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直新增窗口
+keymap.set("n", "<C-s>", ":w<CR>")
+
 
 -- 分屏窗口大小设置
 keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)

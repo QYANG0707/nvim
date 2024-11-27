@@ -30,7 +30,7 @@ require("lspconfig").pylsp.setup {
       plugins = {
         pycodestyle = {
           ignore = {'W391'},
-          maxLineLength = 79
+          maxLineLength = 120
         }
       }
     }
